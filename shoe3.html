@@ -1,0 +1,439 @@
+
+
+
+<section class="container">
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Responsive ecommerce</title>
+<link rel="shortcut icon" href="background.jpg">  
+
+</head>
+<body>
+  <style>
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;  }
+
+
+
+/* #Universal and Default Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  background: url('background.jpg');
+  color: #ddd;
+  background-size: 700px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+line-height: 1;
+margin: 0;
+padding: 0;
+text-align: center;
+
+background-position: center;
+      position: relative;
+      -webkit-background-size:cover;
+      -moz-background-size:cover;
+      -o-background-size:cover;
+      background-size: cover; 
+}
+a {text-decoration: none;}
+h1 {
+font-family: poppins;
+      font-weight: 700;
+      color: #b71540;
+      font-size: 2em;
+      letter-spacing: 1px;
+}
+
+
+
+
+
+h2 {
+font-size: 15px;
+  font-weight: 600;
+margin-bottom: 30px;
+  margin-top: 10px;
+}
+.container {
+margin: auto;
+width: 940px;
+}
+.ul-reset {
+padding-left: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+list-style: none;
+}
+
+
+
+
+
+/*-------------------LOGO----------------*/
+.logo{
+      position: absolute;
+      left: 90px;
+      top: 50px;
+      
+    }
+    .logo a{
+      font-family: poppins;
+      font-weight: 700;
+      color: #c23616;
+      font-size: 2em;
+      letter-spacing: 1px;
+    } 
+    .logo font{
+      color:#ffffff; 
+    }
+
+
+
+
+
+
+
+/* #Navigation Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+nav {
+background: #424242;
+font-size: 0;
+position: relative;
+}
+nav > ul > li {
+display: inline-block;
+  font-size: 14px;
+  padding: 0 15px;
+  position: relative;
+}
+nav > ul > li:first-child {padding-left: 0;}
+nav > ul > li:last-child {padding-right: 0;}
+nav > ul > li > a {
+color: #fff;
+  display: block;
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 3px solid transparent;
+}
+nav > ul > li:hover > a {
+color: #69aae0; 
+  border-bottom: 3px solid #69aae0;
+}
+
+
+
+/* #Mega Menu Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mega-menu {
+background: #f0f0f0;
+  display: none;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+}
+.mega-menu h3 {color: #444;}
+.mega-menu ul {
+float: left;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  width: 205px;
+}
+.mega-menu ul:last-child {margin-right: 0;}
+.mega-menu a {
+border-bottom: 1px solid #ddd;
+  color: #4ea3d8;
+  display: block;
+  padding: 10px 0;
+}
+.mega-menu a:hover {color: #2d6a91;}
+
+
+
+
+
+/* #Droppable Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.droppable {position: static;
+}
+.droppable > a:after {
+content: "\f107";
+  font-family: FontAwesome;
+  font-size: 12px;
+  padding-left: 6px;
+  position: relative;
+  top: -1px;
+  
+
+}
+.droppable:hover .mega-menu {
+	display: block;
+	z-index: 1;
+animation:fade 0.5s;
+}
+
+
+
+/* #Browser Clearfix
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.cf:before,
+.cf:after {
+content: " "; /* 1 */
+   display: table; /* 2 */
+}
+.cf:after {clear: both;}
+
+
+
+
+
+
+
+
+
+
+/*---------------box container--------------*/
+
+	.product-container{
+			display: flex;
+			align-content: center;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 10px 0px;
+			width:900px 0px;
+	
+			margin-left:50px 0px;
+			margin-top:50px;	
+			
+
+
+
+		}
+		.product-box{
+			width:500px;
+			height: 600px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 4px;
+			position: relative;
+			margin: 10px 30px;
+			background-color: #ffffff;
+			flex-direction: column;
+			display: flex;
+			 
+		}
+		.product-box img{
+			height: 400px;
+			
+			
+			
+
+		}
+
+		.product-box p{
+			color:#4d4d70;
+			font-size: 0.9rem;
+			letter-spacing: 0.5px;
+			
+
+
+		}
+
+
+
+/*----------------Buy button----------------*/
+		.buy-button{
+			position: absolute;
+			width: 120px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: calibri;
+			left: 75%;
+			bottom: 20px;
+			transform: translateX(-50%);
+			border-radius: 20px;
+			color: #ffffff;
+			display: none;
+			
+			background: linear-gradient(120deg,#6b60ec 29%, #a166f4);
+		}
+
+		.product-box:hover{
+			box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
+			background-color: #dcdde1;
+			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.9), 0 6px 50px 0 rgba(0, 0, 0, 0.25);
+
+			
+			
+		}
+		.product-box:hover .price{
+			color: #6b60ec;
+			transition: all ease 0.2s;
+
+		}
+		.product-box:hover .buy-button{
+			display: flex;
+			box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 50px 0 rgba(0, 0, 0, 0.15);
+			animation: fade .5s;
+		}
+
+
+
+
+
+
+
+/*--------------view button--------------*/
+		.preview{
+			position: absolute;
+			width: 120px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: calibri;
+			left: 25%;
+			bottom: 20px;
+			transform: translateX(-50%);
+			border-radius: 20px;
+			color: #ffffff;
+			display: none;
+			
+			background: linear-gradient(120deg,#6b60ec 29%, #a166f4);
+		}
+
+		.product-box:hover{
+			box-shadow: 4px 4px 30px rgba(0,0,0,0.1);
+			background-color: #dcdde1;
+			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.9), 0 6px 50px 0 rgba(0, 0, 0, 0.25);
+
+			
+			
+		}
+		.product-box:hover .price{
+			color: #6b60ec;
+			transition: all ease 0.2s;
+
+		}
+		.product-box:hover .preview{
+			display: flex;
+			box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 50px 0 rgba(0, 0, 0, 0.15);
+			animation: fade .5s;
+		}
+
+
+
+
+		
+
+		
+		@keyframes fade{
+			0%{
+				opacity: 0;
+			}
+			100%{
+				opacity: 1;
+			}
+		}
+		
+
+		
+		  /*------------------PROPHERE COLLECTION----------*/
+.main-text h1 ,h2{
+      font-family: soria;
+      font-weight: 700;
+      margin: 0px;
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.08);
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    .main-text font{
+      color: #c23616;
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+
+<section class="container">
+  <div class="logo"><a href="#"><font>SHOE</font>PEE<a></a>
+    </div>  
+
+  <!-------------collection--------------------------->
+  <div class="main-text"> 
+  <h1>Prop<font>her</font>e</h1>
+  <h2>Co<font>lle</font>ction</h2>  
+
+  </div> 
+
+</section><!-- .container -->
+
+<nav>
+  <ul class="container ul-reset">
+    <li><a href="Home.html">Home</a></li>
+    <li class='droppable'>
+      <a href='#'>Products</a>
+      <div class='mega-menu'>
+      <div class="container cf">
+          <ul class="ul-reset">
+            <h3>Products</h3>
+            <li><a href="MaleOne.html">Male Shoes</a></li>
+            <li><a href="FemaleOne.html">Female Shoes</a></li>
+           
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+          
+            <!-- <li><img src="http://placehold.it/205x172"></li> --->
+          </ul>
+        </div><!-- .container -->
+      </div><!-- .mega-menu -->
+    </li><!-- .droppable -->
+    <li class='droppable'>
+     
+    
+    
+  </ul><!-- .container .ul-reset -->
+</nav>
+
+
+	<!--product-container---------------------------->
+	<section class="product">
+		<div class="product-container">
+			<!--box------------------------>
+			<div class="product-box">
+				<!--image------------------>
+			<img src="shoe3.jpg" alt=""/>
+			<!--details-------------------->
+			<p>DURAMO 9 SHOES<br>durable running shoes built with extra heel support.
+</p> 		
+			<!--price-------------------->
+			<a href="#" class="price">$34.99</a>
+			
+			<!--buy-button-------------------->
+			<a href="#" class="buy-button">Add to cart</a>
+			<a href="#"class="preview" >Buy now</a>
+
+
+			
+
+			</div>
+			</div>
+			
+		</div>
+	</section>
+</body>
+</html>
